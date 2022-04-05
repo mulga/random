@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04 April, Monday</title>
+    <script
+      src="https://kit.fontawesome.com/6b7d429c30.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+      body {
+        background-color: #58b19f;
+        font-family: "Space Mono", monospace;
+      }
+
+      .container {
+        text-align: center;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .wrapper {
+        background-color: #55e6c1;
+        padding: 5em;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      #number {
+        font-size: 8em;
+        font-weight: 600;
+        color: #000000;
+
+        text-shadow: 1px 1px 0 #f97f51, 1px 1px 0 #f97f51;
+      }
+      button {
+        background-color: #f97f51;
+        color: #fff;
+        border: none;
+        padding: 1em 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <p id="number">0</p>
+        <button id="generate_number">Generate a Number</button>
+      </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+      function getNumber() {
+        var number = Math.floor(Math.random() * 100);
+        console.log(number);
+        document.getElementById("number").innerHTML = number;
+      }
+
+      document.getElementById("generate_number").onclick = function () {
+        getNumber();
+      };
+    </script>
+  </body>
+</html>
